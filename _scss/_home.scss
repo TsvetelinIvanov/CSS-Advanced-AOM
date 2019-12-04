@@ -1,0 +1,181 @@
+.home-grid {
+    display: grid;
+    grid-template-columns: 13rem 10rem 24rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    height: 70vh;
+    padding: 5rem 1rem;
+    column-gap: 1rem;    
+    //background-image: linear-gradient(white, green, red);
+    background-image: url("/images/bulgaria-flag.png"), linear-gradient(white, green, red);
+    background-repeat: no-repeat;
+    //background-clip: border-box;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.home-grid > div > div {
+    display: block;
+    position: relative;
+    
+    a {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    img {       
+        height: 100%;
+        width: 100%; 
+        background-color: var(--images-background-color, gainsboro);            
+    }
+
+    img:hover {
+        position: relative;
+        transform: scale(1.5);
+        border: 0.1rem solid black;
+        box-shadow: 0 0.5em 1em 0.4em rgba(0, 0, 0, 0.5);
+        z-index: 10;
+    }
+}
+
+.item-a, .item-o, .item-m {
+    display: grid;
+    grid-template-rows: 3fr 3rem 2fr 1fr 2fr;
+    grid-template-columns: 1fr 1.2fr 1fr;
+}
+
+.item-a {   
+    grid-template-areas: 
+     "a-top a-top a-top"
+     "a-left . a-right"
+     "a-left a-mid a-right"
+     "a-left . a-right"
+     "a-left . a-right";     
+    width: 13rem;
+}
+
+.item-o {
+    grid-template-areas: 
+     "o-top o-top o-top"
+     "o-left . o-right"
+     "o-left . o-right"
+     "o-bottom o-bottom o-bottom"
+     "o-bottom o-bottom o-bottom";
+     width: 10rem;
+}
+
+.item-m {
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
+    grid-template-areas: 
+     "m-top-left m-top-left m-top-left m-top-right m-top-right m-top-right"
+     "m-left . m-mid m-mid . m-right"
+     "m-left . m-mid m-mid . m-right"
+     "m-left . m-mid m-mid . m-right"
+     "m-left . m-mid m-mid . m-right";
+     width: 24rem;
+}
+
+.a-top {
+    grid-area: a-top;
+
+    img {                   
+        border-radius: 50% 50% 0 0;  
+    }
+}
+
+.a-left {
+    grid-area: a-left;
+
+    img {                   
+        border-radius: 0 0 0.3rem 0.3rem;  
+    }
+}
+
+.a-mid {
+    grid-area: a-mid;
+}
+
+.a-right {
+    grid-area: a-right;
+
+    img {                   
+        border-radius: 0 0 0.3rem 0.3rem;  
+    }
+}
+
+.o-top {
+    grid-area: o-top;
+
+    img {                   
+        border-radius: 50% 50% 0 0;  
+    }
+}
+
+.o-left {
+    grid-area: o-left;
+}
+
+.o-right {
+    grid-area: o-right;
+}
+
+.o-bottom {
+    grid-area: o-bottom;
+
+    img {                   
+        border-radius: 0 0 50% 50%;  
+    }
+}
+
+.m-top-left {
+    grid-area: m-top-left;
+
+    img {                   
+        border-radius: 70% 70% 0 0;  
+    }
+}
+
+.m-top-right {
+    grid-area: m-top-right;
+
+    img {                   
+        border-radius: 70% 70% 0 0;  
+    }
+}
+
+.m-left {
+    grid-area: m-left;
+
+    img {                   
+        border-radius: 0 0 0.3rem 0.3rem;  
+    }
+}
+
+.m-mid {
+    grid-area: m-mid;
+
+    img {                   
+        border-radius: 0 0 0.3rem 0.3rem;  
+    }
+}
+
+.m-right {
+    grid-area: m-right;
+
+    img {                   
+        border-radius: 0 0 0.3rem 0.3rem;  
+    }
+}
+
+@media (max-width: 800px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 10em);
+        row-gap: 1rem;
+        height: auto;
+    }
+}
