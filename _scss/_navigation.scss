@@ -17,6 +17,8 @@
         li {
             display: block;
             margin: 0 0.7em;
+            position: relative;
+            //list-style: none outside;
             transform: translate(0, -5em);
             opacity: 0;
             transition: opacity 0.3s ease-in, transform 0.3s ease-in;
@@ -26,21 +28,21 @@
                 transform: translate(0, 0);
             }
 
-            @for $i from 1 through 9 {
+            @for $i from 1 through 3 {
                 &:nth-child(#{$i}) { transition-delay: $i * 0.1s; }
             }
-
         }
-    }
+    }    
 
     a {
         display: flex;
+        position: relative;
         padding: 0.5em 1em;
         background-color: var(--link-background-color);
         color: var(--link-color);
         text-decoration: none;
         border-radius: 0.3em;
-        box-shadow: 0 0.5em 1em 0.4em rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0.5em 1em 0.4em rgba(0, 0, 0, 0.5);        
 
         &:before {
             display: block;
@@ -51,20 +53,21 @@
         
         @at-root .nav .current-page a,
         &:hover {
-            background-color: var(--link-hover-background-color);
-            transform: scale(1.2);                    
+            display: flex;
+            position: relative;
+            background-color: var(--link-hover-background-color);            
+            transform: scale(1.2); 
+            z-index: 10;
+                       
+            span {
+                color: var(--link-hover-background-color);
+            }
         }
-    
-    }
 
-    li.page-title-about a:before {
-        content: '\f47f';
+        span {
+            color: var(--link-background-color);
+        }    
     }
-
-    li.page-title-contacts a:before {
-        content: '\f2a0';
-    }
-
 }
 
 .site-nav-toggle {
@@ -82,6 +85,33 @@
         @include bp(desktop) {
             display: none;
         }
+    }
+}
 
+.site-nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 10em;    
+}
+
+.site-nav ul ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.site-nav li:hover > ul {
+    display: block;
+}
+
+.site-nav li:hover > a,
+.site-nav a:hover {    
+    position: relative;
+    background-color: var(--link-hover-background-color);          
+    z-index: 10; 
+
+    span {
+        color: var(--link-hover-background-color);
     }
 }

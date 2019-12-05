@@ -1,21 +1,41 @@
 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
 <nav class="site-nav location-{{ include.location }}">
-    <ul>
+    <!-- <ul>
     {% assign navigation_pages = site.pages | sort:"order" %}
 
     {% for current_page in navigation_pages %}
-        {% if current_page.title %}
-            {% if current_page.order %}
+        {% if current_page.title %}            
 
         <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
             <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
         </li>
-
-            {% endif %}
+            
         {% endif %}
     {% endfor %}
     </ul>
     {% if include.location == 'header' %}
     
-    {% endif %}
+    {% endif %} -->
+
+    <ul>
+        <li><a href="{{ site.baseurl }}/">Начало</a></li>
+        <li>
+            <a href="{{ site.baseurl }}/#">За<span>_</span>нас</a>
+            <ul>
+                <li><a href="{{ site.baseurl }}/#">Кои сме ние</a></li>
+                <li><a href="{{ site.baseurl }}/#">История</a></li>
+                <li>
+                    <a href="{{ site.baseurl }}/#">Структура</a>
+                    <ul>
+                        <li><a href="{{ site.baseurl }}/#">Координатори на политики</a></li>
+                        <li><a href="{{ site.baseurl }}/#">Регионални координатори</a></li>
+                        <li><a href="{{ site.baseurl }}/#">Членове</a></li>
+                        <li><a href="{{ site.baseurl }}/#">Помощници и симпатизанти</a></li>                       
+                    </ul>
+                </li>                
+                <li><a href="{{ site.baseurl }}/#">Контакти</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ site.baseurl }}/news.html">Новини</a></li>
+    </ul>    
 </nav>

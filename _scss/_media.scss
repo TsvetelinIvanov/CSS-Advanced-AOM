@@ -1,0 +1,51 @@
+.site-media {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    position: relative;
+	//height: 75vh;
+    overflow: hidden;
+    background-image: url("/images/flag-bulgaria.jpg"), linear-gradient(white, green, red);
+    background-repeat: no-repeat;
+	background-position: center;
+    background-size: 100% 100%;	
+    
+    h1 {
+        font-weight: 700;
+    }
+    
+    p {
+        font-weight: 400;
+        opacity: 0.8;
+    }
+    
+    .social {
+        padding-top: 2em;
+    }
+}
+
+.site-media img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.site-media:before {
+	display: block;
+	content: '';
+	background: rgba(19,41,48,0.8);
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0;
+}
+
+// .site-media .site-wrapper {
+// 	width: 100%;
+// 	color: #FFF;
+// 	position: relative;
+// 	z-index: 10;
+// 	font-size: 1.6em;
+// 	padding-right: 10em;
+// }
