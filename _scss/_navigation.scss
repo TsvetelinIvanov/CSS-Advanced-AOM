@@ -1,12 +1,12 @@
-.site-nav {
-    text-align: right;
+.site-nav {    
     padding-top: 0.5em;
+    z-index: 10;
 
     @include bp(mobile) {
         display: none;
     }
 
-    ul {
+    ul {        
         padding: 0;
         margin: 0;
 
@@ -16,8 +16,8 @@
 
         li {
             display: block;
-            margin: 0 0.7em;
-            position: relative;
+            margin: 0 1em;
+            //position: relative;
             //list-style: none outside;
             transform: translate(0, -5em);
             opacity: 0;
@@ -35,8 +35,7 @@
     }    
 
     a {
-        display: flex;
-        position: relative;
+        display: flex;       
         padding: 0.5em 1em;
         background-color: var(--link-background-color);
         color: var(--link-color);
@@ -53,12 +52,11 @@
         
         @at-root .nav .current-page a,
         &:hover {
-            display: flex;
-            position: relative;
+            display: flex;                 
+            margin-bottom: 0.4em;
             background-color: var(--link-hover-background-color);            
-            transform: scale(1.2); 
-            z-index: 10;
-                       
+            transform: scale(1.2);            
+                                 
             span {
                 color: var(--link-hover-background-color);
             }
@@ -105,11 +103,11 @@
     display: block;
 }
 
-.site-nav li:hover > a,
-.site-nav a:hover {    
+.site-nav a:hover,
+.site-nav li:hover > a {
     position: relative;
-    background-color: var(--link-hover-background-color);          
-    z-index: 10; 
+    background-color: var(--link-hover-background-color);
+    z-index: 10;
 
     span {
         color: var(--link-hover-background-color);
