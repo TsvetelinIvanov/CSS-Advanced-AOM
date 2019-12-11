@@ -1,0 +1,39 @@
+.article-content {
+    padding: 1em;
+
+    a {
+        color: var(--link-background-color);
+    }
+
+    a:hover {
+        color: var(--link-hover-background-color);        
+    }
+}
+
+.article-header {
+    padding: 1em;
+    text-align: center;
+    
+    img {
+        margin: 1em auto;
+        width: 30%;
+        height: auto;
+    }
+}
+
+.article-main, .article-footer {
+    padding: 1em 3em;
+
+    p {
+        margin-bottom: 1em;
+    }
+}
+
+.article-footer {
+    
+    p:last-child {
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
