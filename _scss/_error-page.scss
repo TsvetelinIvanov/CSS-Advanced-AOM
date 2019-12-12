@@ -1,0 +1,24 @@
+.container-404,  .container-478 {
+    margin: 1em auto;
+    padding: 3em;
+    max-width: 600px;
+    text-align: center;
+
+    h1 {
+        margin: 0.5em 0;
+        font-size: 2.5em;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
+}  
+
+.container-478 {
+    p:nth-child(2), p:nth-child(6) {
+        margin-bottom: 2em;
+        font-size: 1em;
+    }
+
+    p:nth-child(5) {
+        margin-bottom: 3em;        
+    }
+}  

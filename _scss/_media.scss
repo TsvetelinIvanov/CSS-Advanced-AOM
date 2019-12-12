@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
 	background-position: center;
     background-size: 100% 100%;	
+    text-align: center;
     
     h1 {
         font-weight: 700;
@@ -33,7 +34,7 @@
 .site-media:before {
 	display: block;
 	content: '';
-	background: rgba(19,41,48,0.8);
+	background: rgba(71, 155, 180, 0.5);
 	position: absolute;
 	top: 0; 
 	left: 0; 
