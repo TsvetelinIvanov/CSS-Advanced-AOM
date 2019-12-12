@@ -10,7 +10,7 @@
 .news-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around;     
 
     img {
         width: 100%;
@@ -50,6 +50,7 @@
     flex-direction: column;    
     flex: 0 0 32%;
     //width: 18em;
+    height: 55em;
     background-color: white;    
     border: 0.1rem ridge rgba(150, 150, 150, 0.5);
     border-radius: 0.5rem;    
@@ -59,8 +60,12 @@
         padding: 1em;
     }
 
+    div:nth-child(2) {
+        flex: 25;
+    }
+
     div:last-child {
-        //flex: 1;
+        flex: 1;
         text-align: center;        
         border-top: 0.1em solid rgba(150, 150, 150, 0.5);           
     }
@@ -78,10 +83,6 @@
         color: var(--link-hover-background-color);        
     }
 }
-
-// .card div:nth-child(2) {
-//     flex: 25;
-// }
 
 @media (max-width: 960px) {
     .news-items::before,

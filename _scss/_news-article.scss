@@ -16,7 +16,7 @@
     
     img {
         margin: 1em auto;
-        width: 30%;
+        width: 50%;
         height: auto;
     }
 }
@@ -26,6 +26,13 @@
 
     p {
         margin-bottom: 1em;
+    }
+}
+
+.article-main {   
+    p:first-child {
+        font-size: 1.2em;
+        font-weight: bold;
     }
 }
 
