@@ -137,7 +137,7 @@
     z-index: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .timeline::after {
         left: 10%;
     }
@@ -174,7 +174,7 @@
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 480px) {
     .timeline > header {
         width: auto;
     }

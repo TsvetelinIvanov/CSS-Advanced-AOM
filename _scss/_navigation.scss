@@ -100,7 +100,7 @@
 }
 
 .site-nav li:hover > ul {
-    display: block;
+    display: block;  
 }
 
 .site-nav a:hover,
@@ -112,4 +112,16 @@
     span {
         color: var(--link-hover-background-color);
     }
+}
+
+@media (max-width: 1024px) {
+    .site-nav ul ul {
+        top: 0;
+        left: 100%;
+    }
+
+    // .site-nav ul ul ul {  
+    //     top: 230%;      
+    //     left: 0;
+    // }
 }
