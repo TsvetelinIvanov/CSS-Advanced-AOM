@@ -1,7 +1,7 @@
 .structure {
     padding: 3rem 1.5rem;
 
-    h1 {
+    h1, h2, h3 {
         text-align: center;
     }
 
@@ -27,9 +27,17 @@
 
     ul {
         margin-left: 3rem;
-    }
+    }   
+}
 
-    h3 {
-        text-align: center;
-    }    
+@media (max-width: 960px) {
+    .structure section {
+        width: 60%;
+    }
+}
+
+@media (max-width: 640px) {
+    .structure section {
+        width: 100%;
+    }
 }
