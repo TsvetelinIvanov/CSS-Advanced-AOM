@@ -1,0 +1,229 @@
+$border-width: 0.1em;
+$primary-color: green;
+$accent-color: red;
+$text-color: gray;
+$light-text-color: white;
+$tablet-background-color: var(--warning-background-color);
+$laptop-background-color: var(--logo-background-color);
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@mixin bordered($color, $width) {
+    border: $width solid $color;
+    border-radius: 0.3em;
+  }
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: space-around;    
+    flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: $laptop) {
+        @content;
+    }
+}
+
+
+.helpers-and-fans-header {
+    padding: 1em;
+    margin: 1em;
+    margin-bottom: 3em;
+    text-align: center;
+
+    h1 {             
+        padding: 1em 2em;       
+        border: 0.2em solid $accent-color;
+        border-radius: 0.5em;
+        transition: border 1s linear;
+    }
+
+    h1:hover { 
+        border-width: 1em; 
+    }
+}
+
+.helpers, .fans {
+    padding: 1em;
+
+    h2 {             
+        margin: 1em;
+        margin-bottom: 3em;             
+        padding: 1em 2em; 
+        text-align: center;       
+        border: 0.2em solid $primary-color;
+        border-radius: 0.5em;
+        transition: border 1s linear;
+    }
+    
+    h2:hover { 
+        border-width: 1em; 
+    }
+
+    div:first-of-type, div:last-of-type {   
+        display: flex;     
+        width: 3em;
+        height: 3em;
+        margin: 2em auto;
+        text-align: center;
+        color: $light-text-color;   
+        background-color: $accent-color;
+        border-radius: 50%;    
+        animation: small-circle-to-square 4s 0.3s infinite cubic-bezier(0.0, 0.0, 0.58, 1.0) alternate;
+
+        p {
+            margin: auto;
+        }
+    }
+    
+    @keyframes small-circle-to-square {
+        from  {
+          border-radius: 50%;
+          background: $accent-color;
+          transform: scale(1);
+        }
+        
+        to {  
+          border-radius: 0;
+          background: $primary-color;
+          transform: scale(1.7);            
+        }
+    }
+
+    p:first-of-type {
+        text-align: center;
+    }
+
+    p:first-of-type > span { 
+        margin-bottom: 0.7em;
+        font-weight: bold;    
+        opacity: 0;
+        animation: inner-fade-in-from-left 10s 5s 1 cubic-bezier(0.0, 0.0, 1.0, 1.0) forwards;
+    }
+    
+    @keyframes inner-fade-in-from-left {
+        from  {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        
+        to {  
+          opacity: 1; 
+          transform: translateX(0);           
+        }
+    }
+    
+    p:first-of-type > span:nth-child(1) {
+        animation-delay: 10.5s;
+    }
+    
+    p:first-of-type > span:nth-child(2) {
+        animation-delay: 11s;
+    }
+    
+    p:first-of-type > span:nth-child(3) {
+        animation-delay: 11.5s;
+    }
+    
+    p:first-of-type > span:nth-child(4) {
+        animation-delay: 12s;
+    }
+    
+    p:first-of-type > span:nth-child(5) {
+        animation-delay: 12.5s;
+    }
+    
+    p:first-of-type > span:nth-child(6) {
+        animation-delay: 13s;
+    }
+    
+    p:first-of-type > span:nth-child(7) {
+        animation-delay: 13.5s;
+    }
+}
+
+.wish {
+    width: 90%;
+    margin: 3em auto;
+    padding: 0.5em;
+    text-align: center;
+
+    @include bordered($accent-color, $border-width);
+}
+
+.hope {
+    width: 90%;
+    margin: 3em auto;
+    padding: 0.5em;
+    text-align: center;
+
+    @include bordered($primary-color, $border-width);
+}
+
+.awaiting {
+    width: 90%;
+    margin: 3em auto;
+    background: $primary-color;
+    color: $text-color;
+}
+
+.await {
+    @include flexCenter(row);
+    width: 80%;
+    margin: 0 auto;
+
+     #{&}-word {
+        font-weight: weight(bold);
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    @include mobile{
+        flex-direction: column;
+    }
+
+    @include tablet {
+        background-color: $tablet-background-color;
+    }
+
+    @include laptop {
+        background-color: $laptop-background-color;
+    }
+}
+
+.awaiting {
+    @include theme($light-theme: true);    
+}
+

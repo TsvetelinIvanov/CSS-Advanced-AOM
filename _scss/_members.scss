@@ -1,0 +1,179 @@
+$primary-color: green;
+$accent-color: red;
+$text-color: gray;
+$light-text-color: white;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+@mixin transform($property) {    
+    transform: $property;
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: space-around;    
+    flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+
+.members {
+    padding: 1em;
+
+    h1 {
+        margin: 1em;
+        margin-bottom: 3em;             
+        padding: 1em 2em; 
+        text-align: center;              
+        border: 0.2em solid $accent-color;
+        border-radius: 0.5em;
+        transition: border 1s linear;        
+    }
+    
+    h1:hover { 
+        border-width: 1em; 
+    }
+
+    div:first-of-type, div:last-of-type {
+        display: flex;
+        width: 4em;
+        height: 4em;
+        margin: 3em auto;
+        text-align: center;
+        color: $light-text-color;   
+        background-color: $accent-color;
+        border-radius: 50%;    
+        animation: circle-to-square 3s 0.3s infinite cubic-bezier(0.0, 0.0, 0.58, 1.0) alternate;
+
+        p {
+            margin: auto;
+        }
+    }
+    
+    @keyframes circle-to-square {
+        from  {
+          border-radius: 50%;
+          background-color: $accent-color;
+          transform: scale(1);
+        }
+        
+        to {  
+          border-radius: 0;
+          background: $primary-color;
+          transform: scale(1.7);            
+        }
+    }
+
+    .excuse > p {
+        padding: 2em 1em;
+        text-align: center;
+        font-weight: bold; 
+    }
+
+    .excuse > p:first-child > span { 
+        margin-bottom: 0.7em;        
+               
+        opacity: 0;
+        animation: fade-in-from-left 10s 5s 1 cubic-bezier(0.0, 0.0, 1.0, 1.0) forwards;
+    }
+    
+    @keyframes fade-in-from-left {
+        from  {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        
+        to {  
+          opacity: 1; 
+          transform: translateX(0);           
+        }
+    }
+    
+    .excuse > p:first-child > span:nth-child(1) {
+        animation-delay: 10.5s;
+    }
+    
+    .excuse > p:first-child > span:nth-child(2) {
+        animation-delay: 11s;
+    }
+    
+    .excuse > p:first-child > span:nth-child(3) {
+        animation-delay: 11.5s;
+    }
+    
+    .excuse > p:first-child > span:nth-child(4) {
+        animation-delay: 12s;
+    }
+    
+    .excuse > p:first-child > span:nth-child(5) {
+        animation-delay: 12.5s;
+    }
+    
+    .excuse > p:first-child > span:nth-child(6) {
+        animation-delay: 13s;
+    }
+    
+    .excuse > p:first-child > span:nth-child(7) {
+        animation-delay: 13.5s;
+    }    
+}
+
+.waiting {   
+    &-word {
+        font-weight: bold;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &-word {
+        color: $accent-color;
+    }
+}
+
+.profile-purpose {
+    width: 40%;
+    margin: 10em auto;
+    padding: 1em;
+    color: $light-text-color;
+    background-color: $primary-color;
+    border-radius: 0.5em;
+    
+    @include transform(rotate(20deg));
+}
+
+.expectation {
+    width: 90%;
+    margin: 3em auto;
+    background: $primary-color;
+    color: $text-color;
+}
+
+.expect {
+    @include flexCenter(row);
+    width: 80%;
+    margin: 0 auto;
+
+     #{&}-word {
+        font-weight: weight(bold);
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+.expectation {
+    @include theme($light-theme: true);
+}
