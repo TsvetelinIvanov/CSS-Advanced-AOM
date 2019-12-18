@@ -15,8 +15,9 @@
     </ul>
     {% if include.location == 'header' %}
     
-    {% endif %} -->
-
+    {% endif %} -->      
+    
+    {% if include.location == 'header' %}
     <ul>
         <li><a href="{{ site.baseurl }}/">Начало</a></li>
         <li>
@@ -37,5 +38,15 @@
             </ul>
         </li>
         <li><a href="{{ site.baseurl }}/news.html">Новини</a></li>
-    </ul>    
+    </ul>
+    {% endif %}
+
+    {% if include.location == 'footer' %}
+    <ul>
+        <li><a href="{{ site.baseurl }}/">Начало</a></li>
+        <li><a href="{{ site.baseurl }}/about-us.html">За<span>_</span>нас</a></li>
+        <li><a href="{{ site.baseurl }}/policy-coordinators.html">Координатори на политики</a></li>
+        <li><a href="{{ site.baseurl }}/contacts.html">Контакти</a></li>        
+    </ul>
+    {% endif %}
 </nav>
