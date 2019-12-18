@@ -5,11 +5,34 @@
 	align-items: center;
 	font-size: 0.8em;
 	background-color: var(--footer-background-color);
-}
 
-.site-footer .social a {
-	background: rgba(0,0,0,0.3);
-	color: #FFF;
+	ul:nth-child(4) {
+		display: flex;
+	}
+	
+	ul:nth-child(4) li {
+		display: block;
+		list-style: none outside;
+		margin-right: 1em;
+	}
+	
+	ul:nth-child(4) a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: var(--link-background-color);
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, 0.5);
+		width: 2.8em;
+		height: 2.8em;
+		line-height: 1;
+		transition: background-color 0.4s ease-in;		
+	}	
+	
+	ul:nth-child(4) a:hover {
+		background-color: var(--logo-background-color);
+		color: var(--link-hover-background-color);
+	}
 }
 
 .site-footer p {

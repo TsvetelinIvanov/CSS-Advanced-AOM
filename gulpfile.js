@@ -56,7 +56,7 @@ gulp.task("watch", function() {
 });
 
 gulp.task("deploy", gulp.series('jekyll', 'sass', function() {
-	return cp.spawn('git status && git commit -am "Update navigation and layout" && git pull && git push', { stdio: "inherit", shell: true });
+	return cp.spawn('git status && git commit -am "Update media and layout" && git pull && git push', { stdio: "inherit", shell: true });
 }));
 
 gulp.task("default", gulp.series('jekyll-dev', 'sass', 'watch'));
