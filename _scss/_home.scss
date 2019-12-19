@@ -35,10 +35,29 @@
 
     img:hover {
         position: relative;
-        transform: scale(1.5);
+        transform: scale(1.2);
         border: 0.1rem solid black;
         box-shadow: 0 0.5em 1em 0.4em rgba(0, 0, 0, 0.5);
         z-index: 10;
+    }
+
+    span {
+        display: none;            
+    }
+}
+
+.home-grid > div > div:hover {
+    span {
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        padding: 0.5em 0.3em;
+        text-align: center;
+        background-color: white; 
+        color: green;  
+        border: 0.1em solid red;
+        border-radius: 0.4em;    
+        z-index: 11;     
     }
 }
 
