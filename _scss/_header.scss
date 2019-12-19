@@ -7,6 +7,8 @@
 }
 
 .title-descripion {
+	text-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.5);
+	
 	h1 {
 		margin: 0;
 		padding: 0;
@@ -47,13 +49,21 @@
 	}
 }
 
+.warning:hover {
+	transform: scale(1.2) translateX(-20%);
+	z-index: 11;
+}
+
 @media (max-width: 640px) {
 	.site-header {
 		flex-direction: column;
 	}
 
 	.site-header > * {
-		margin: 1em;
-		
+		margin: 1em;		
 	}	
+
+	.warning:hover {
+		transform: scale(1.2) translateX(0);		
+	}
 }
