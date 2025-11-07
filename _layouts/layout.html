@@ -21,7 +21,6 @@
 <body class="page-{{ page.title | slugify }}">
     <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
     <div class="site">
-
         <header class="site-header">            
             <div class="logo">
                 <h1>A</h1>
@@ -33,26 +32,20 @@
                 <h1><span>O</span>птимизация</h1>
                 <h1><span>M</span>еритокрация</h1>                  
             </div>
-
             {% include navigation.html location="header" %}
-
             <div class="warning">
                 <p><span>предупреждение:</span> Това е студентски проект, а не истински уебсайт на политическа партия и хората в него са измислени!</p>
                 <p><span>warning:</span> This is a student's projeject, not a real political party website, and people there are fiction!</p>                        
             </div>            
         </header>
-        <main class="site-content">   
-
-            {{ content }}         
-
+        <main class="site-content">
+            {{ content }}
         </main>
         <footer class="site-footer">
-            <p>{{ site.title }}</p>
-            
+            <p>{{ site.title }}</p>            
             <div class="info">                            
                 {% include navigation.html location="footer" %}
             </div>
-
             <div class="contacts">
                 <p>1000 София ул."Утопия" № 451</p>
                 <p>п.кутия: 1984</p>
@@ -60,15 +53,13 @@
                 <p>тел. 00 111 00</p>
                 <p>e-mail: <a href="{{ site.baseurl }}/476.html">aom@aom.bg</a></p>
             </div>
-
             <ul>
                 <li><a href="{{ site.baseurl }}/476.html"><i class="fab fa-facebook-square"></i></a></li>
                 <li><a href="{{ site.baseurl }}/476.html"><i class="fab fa-twitter"></i></a></li>                        
                 <li><a href="{{ site.baseurl }}/476.html"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="{{ site.baseurl }}/476.html"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="{{ site.baseurl }}/476.html"><i class="fab fa-pinterest"></i></a></li>                
-            </ul> 
-
+            </ul>
             <p>&copy; 2019 АОМ България</p>       
         </footer>
     </div>    
