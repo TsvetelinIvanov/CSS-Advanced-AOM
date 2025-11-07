@@ -1,52 +1,47 @@
 <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
 <nav class="site-nav location-{{ include.location }}">
     <!-- <ul>
-    {% assign navigation_pages = site.pages | sort:"order" %}
-
-    {% for current_page in navigation_pages %}
-        {% if current_page.title %}            
-
-        <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
-            <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
-        </li>
-            
-        {% endif %}
-    {% endfor %}
-    </ul>
+        {% assign navigation_pages = site.pages | sort:"order" %}
+        {% for current_page in navigation_pages %}
+            {% if current_page.title %}
+                <li class="page-title-{{ current_page.title | slugify }}
+                    {% if current_page.url == page.url %}
+                        current-page
+                    {% endif %}">
+                    <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+                </li>            
+            {% endif %}
+        {% endfor %}
+    </ul> -->    
     {% if include.location == 'header' %}
-    
-    {% endif %} -->      
-    
-    {% if include.location == 'header' %}
-    <ul>
-        <li><a href="{{ site.baseurl }}/">Начало</a></li>
-        <li>
-            <a href="{{ site.baseurl }}/about-us.html">За<span>_</span>нас</a>
-            <ul>
-                <li><a href="{{ site.baseurl }}/who-are-we.html">Кои сме ние</a></li>
-                <li><a href="{{ site.baseurl }}/history.html">История</a></li>
-                <li>
-                    <a href="{{ site.baseurl }}/structure.html">Структура</a>
-                    <ul>
-                        <li><a href="{{ site.baseurl }}/policy-coordinators.html">Координатори на политики</a></li>
-                        <li><a href="{{ site.baseurl }}/region-coordinators.html">Регионални координатори</a></li>
-                        <li><a href="{{ site.baseurl }}/members.html">Членове</a></li>
-                        <li><a href="{{ site.baseurl }}/helpers-and-fans.html">Помощници и симпатизанти</a></li>                       
-                    </ul>
-                </li>                
-                <li><a href="{{ site.baseurl }}/contacts.html">Контакти</a></li>
-            </ul>
-        </li>
-        <li><a href="{{ site.baseurl }}/news.html">Новини</a></li>
-    </ul>
+        <ul>
+            <li><a href="{{ site.baseurl }}/">Начало</a></li>
+            <li>
+                <a href="{{ site.baseurl }}/about-us.html">За<span>_</span>нас</a>
+                <ul>
+                    <li><a href="{{ site.baseurl }}/who-are-we.html">Кои сме ние</a></li>
+                    <li><a href="{{ site.baseurl }}/history.html">История</a></li>
+                    <li>
+                        <a href="{{ site.baseurl }}/structure.html">Структура</a>
+                        <ul>
+                            <li><a href="{{ site.baseurl }}/policy-coordinators.html">Координатори на политики</a></li>
+                            <li><a href="{{ site.baseurl }}/region-coordinators.html">Регионални координатори</a></li>
+                            <li><a href="{{ site.baseurl }}/members.html">Членове</a></li>
+                            <li><a href="{{ site.baseurl }}/helpers-and-fans.html">Помощници и симпатизанти</a></li>                       
+                        </ul>
+                    </li>                
+                    <li><a href="{{ site.baseurl }}/contacts.html">Контакти</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ site.baseurl }}/news.html">Новини</a></li>
+        </ul>
     {% endif %}
-
     {% if include.location == 'footer' %}
-    <ul>
-        <li><a href="{{ site.baseurl }}/">Начало</a></li>
-        <li><a href="{{ site.baseurl }}/about-us.html">За<span>_</span>нас</a></li>
-        <li><a href="{{ site.baseurl }}/policy-coordinators.html">Координатори на политики</a></li>
-        <li><a href="{{ site.baseurl }}/contacts.html">Контакти</a></li>        
-    </ul>
+        <ul>
+            <li><a href="{{ site.baseurl }}/">Начало</a></li>
+            <li><a href="{{ site.baseurl }}/about-us.html">За<span>_</span>нас</a></li>
+            <li><a href="{{ site.baseurl }}/policy-coordinators.html">Координатори на политики</a></li>
+            <li><a href="{{ site.baseurl }}/contacts.html">Контакти</a></li>        
+        </ul>
     {% endif %}
 </nav>
