@@ -83,8 +83,7 @@ $font-weights: (
     }
 
     .excuse > p:first-child > span { 
-        margin-bottom: 0.7em;        
-               
+        margin-bottom: 0.7em;
         opacity: 0;
         animation: fade-in-from-left 10s 5s 1 cubic-bezier(0.0, 0.0, 1.0, 1.0) forwards;
     }
