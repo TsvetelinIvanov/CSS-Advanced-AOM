@@ -8,7 +8,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 3em;     
+    margin: 3em;
+
+	.region-coordinator-content {
+        margin-top: 2em;
+    }
 
     .region-coordinator {
         display: flex;
@@ -24,6 +28,14 @@
         background-color: var(--logo-background-color);
         border-radius: 0.5em;
     }
+
+	.region-coordinator img {
+        width: 10em;
+        height: 10em;     
+        border: 0.5em solid rgba(219, 219, 219, 0.7);    
+        border-radius: 50%;
+        box-shadow: 0 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+    }
     
     .region-coordinator p {
         text-align: center;
@@ -33,18 +45,6 @@
     .region-coordinator p span {
         font-weight: bold;
         font-style: normal;
-    }
-    
-    .region-coordinator img {
-        width: 10em;
-        height: 10em;     
-        border: 0.5em solid rgba(219, 219, 219, 0.7);    
-        border-radius: 50%;
-        box-shadow: 0 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
-    }   
-
-    .region-coordinator-content {
-        margin-top: 2em;
     }
 }
 
