@@ -5,6 +5,14 @@
         text-align: center;
     }
 
+    h3 {
+        margin-top: 2rem;
+    }
+
+    ol {
+        margin-left: 3rem;
+    }
+
     section {
         margin-bottom: 2rem;
         padding: 0.5rem;
@@ -19,14 +27,6 @@
             border-radius: 0.5em;
         }
     }
-
-    ol {
-        margin-left: 3rem;
-    }
-
-    h3 {
-        margin-top: 2rem;
-    }    
 }
 
 .who-are-we-content > p {
