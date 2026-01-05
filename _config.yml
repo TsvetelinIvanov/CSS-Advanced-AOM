@@ -20,7 +20,7 @@
 
 title: AOM
 email: tzendy01@abv.bg
-description: This is exam project for SoftUni's course CSS Advanced. It should be AOM official website. AOM (Automatization Optimization Meritocracy) is a political party, who supports a program for decreasing administrative weight and taxes by automatization and optimization of administration, and simplifying the law.
+description: This is exam project for SoftUni's course CSS Advanced. It should be AOM official website. AOM (Automatization Optimization Meritocracy) is a political party, which supports a program for decreasing administrative weight and taxes by automatization and optimization of administration, and simplifying the law.
 baseurl: "/CSS-Advanced-AOM" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
@@ -54,16 +54,16 @@ plugins:
 #   - vendor/ruby/
 
 exclude:
-  - docs
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - package.json
-  - package-lock.json
-  - gulpfile.js
-  - theme-personal
+    - docs
+    - Gemfile
+    - Gemfile.lock
+    - node_modules
+    - node_modules/
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
+    - package.json
+    - package-lock.json
+    - gulpfile.js
+    - theme-personal
