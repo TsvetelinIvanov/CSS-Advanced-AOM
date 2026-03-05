@@ -41,7 +41,7 @@ gulp.task("watch", function() {
 
 	gulp.watch( '_scss/**/*.scss', gulp.series('sass') );
 
-	gulp.watch(
+	gulp.watch (
 		[
 			"./*.html",
 			"./*.yml",
@@ -49,7 +49,7 @@ gulp.task("watch", function() {
 			"./_layouts/*.html",
 			"./_posts/**/*.*"
 		]
-	).on('change', gulp.series('jekyll-dev', 'sass') );
+	).on('change', gulp.series('jekyll-dev', 'sass'));
 
 	gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );
 	gulp.watch( 'docs/**/*.js' ).on('change', browserSync.reload );
